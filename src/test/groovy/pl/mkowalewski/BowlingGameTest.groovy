@@ -6,7 +6,7 @@ class BowlingGameTest extends Specification {
 
     def "calculate score for 1- 1- 1- 1- 1- 1- 1- 1- 1- 1-"() {
         given:
-        BowlingGame bowlingGame = new BowlingGame(tenFramesWithOneRolledPin())
+        BowlingGame bowlingGame = new BowlingGame(tenFramesWithOneRolledPinEach())
 
         when:
         def score = bowlingGame.calculateScore()
@@ -15,7 +15,7 @@ class BowlingGameTest extends Specification {
         score == 10
     }
 
-    private Frame[] tenFramesWithOneRolledPin() {
+    private Frame[] tenFramesWithOneRolledPinEach() {
         Frame[] frames = new Frame[10]
         for (int i = 0; i < 10; i++) {
             frames[i] = new Frame(1, 0)
