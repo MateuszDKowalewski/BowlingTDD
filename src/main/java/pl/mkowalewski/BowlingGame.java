@@ -9,6 +9,10 @@ class BowlingGame {
   }
 
   public int calculateScore() {
-    return 0;
+    int score = 0;
+    for (Frame frame : framesInGame) {
+      score += frame.getKnockedPinsCount();
+    }
+    return score;
   }
 }

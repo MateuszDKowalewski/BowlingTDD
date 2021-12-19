@@ -10,4 +10,7 @@ class Frame {
     this.knockedInSecondRoll = knockedInSecondRoll;
   }
 
+  public int getKnockedPinsCount() {
+    return knockedInFirstRoll + knockedInSecondRoll;
+  }
 }
