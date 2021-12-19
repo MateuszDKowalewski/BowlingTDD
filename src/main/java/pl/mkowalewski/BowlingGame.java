@@ -22,18 +22,18 @@ class BowlingGame {
     } else if (framesInGame[i].isSpare()) {
       return getSpareFrameScore(i);
     } else {
-      return getFrameScore(framesInGame[i]);
+      return getFrameScore(i);
     }
   }
 
-  private int getFrameScore(Frame frame) {
-    return frame.getKnockedPinsCount();
+  private int getFrameScore(int frameIndex) {
+    return framesInGame[frameIndex].getKnockedPinsCount();
   }
 
   private int getStrikeFrameScore(int i) {
     int strikeFrameScore = 0;
-    strikeFrameScore += getFrameScore(framesInGame[i]);
-    strikeFrameScore += getFrameScore(framesInGame[i + 1]);
+    strikeFrameScore += getFrameScore(i);
+    strikeFrameScore += getFrameScore(i + 1);
     if (framesInGame[i + 1].isStrike()) {
       strikeFrameScore += framesInGame[i + 2].getKnockedInFirstRoll();
     }
@@ -41,6 +41,6 @@ class BowlingGame {
   }
 
   private int getSpareFrameScore(int i) {
-    return getFrameScore(framesInGame[i]) + framesInGame[i + 1].getKnockedInFirstRoll();
+    return getFrameScore(i) + framesInGame[i + 1].getKnockedInFirstRoll();
   }
 }
