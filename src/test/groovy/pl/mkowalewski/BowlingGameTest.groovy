@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 class BowlingGameTest extends Specification {
 
-    def "calculate score for 1- 1- 1- 1- 1- 1- 1- 1- 1- 1-"() {
+    def "calculate score for 1- 1- 1- 1- 1- 1- 1- 1- 1- 1- game"() {
         given:
         BowlingGame bowlingGame = BowlingGameFactory.oneKnockedPinPerFrame()
 
@@ -15,7 +15,7 @@ class BowlingGameTest extends Specification {
         score == 10
     }
 
-    def "calculate score for X X X X X X X X X X X X"() {
+    def "calculate score for X X X X X X X X X X X X game"() {
         given:
         BowlingGame bowlingGame = BowlingGameFactory.twelveStrikes()
 
@@ -26,7 +26,7 @@ class BowlingGameTest extends Specification {
         score == 300
     }
 
-    def "calculate score for 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"() {
+    def "calculate score for 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5 game"() {
         given:
         BowlingGame bowlingGame = BowlingGameFactory.pairsOfFiveAndSpareWithFinalFive()
 
