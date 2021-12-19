@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 class BowlingGameTest extends Specification {
 
-    def "should calculate score without strikes or spares"() {
+    def "calculate score for 1- 1- 1- 1- 1- 1- 1- 1- 1- 1-"() {
         given:
         BowlingGame bowlingGame = new BowlingGame(tenFramesWithOneRolledPin())
 
