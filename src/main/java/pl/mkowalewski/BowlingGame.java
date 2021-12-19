@@ -12,15 +12,25 @@ class BowlingGame {
     int score = 0;
     for (int i = 0; i < 10; i++) {
       if (framesInGame[i].isStrike()) {
-        score += framesInGame[i].getKnockedPinsCount();
-        if (framesInGame[i + 1].isStrike()) {
-          score += framesInGame[i + 2].getKnockedInFirstRoll();
-        }
-        score += framesInGame[i + 1].getKnockedPinsCount();
+        score += getStrikeFrameScore(i);
       } else {
-        score += framesInGame[i].getKnockedPinsCount();
+        score += getFrameScore(framesInGame[i]);
       }
     }
     return score;
+  }
+
+  private int getFrameScore(Frame frame) {
+    return frame.getKnockedPinsCount();
+  }
+
+  private int getStrikeFrameScore(int i) {
+    int strikeFrameScore = 0;
+    strikeFrameScore += getFrameScore(framesInGame[i]);
+    strikeFrameScore += getFrameScore(framesInGame[i + 1]);
+    if (framesInGame[i + 1].isStrike()) {
+      strikeFrameScore += framesInGame[i + 2].getKnockedInFirstRoll();
+    }
+    return strikeFrameScore;
   }
 }
