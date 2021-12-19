@@ -5,7 +5,7 @@ class BowlingGameFactory {
     private static BowlingGame oneKnockedPinPerFrame() {
         Frame[] frames = new Frame[10]
         for (int i = 0; i < 10; i++) {
-            frames[i] = new Frame(1, 0)
+            frames[i] = new Frame(1)
         }
         return new BowlingGame(frames)
     }

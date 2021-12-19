@@ -15,7 +15,7 @@ class Frame {
   }
 
   public static Frame strike() {
-    return new Frame(10, 0);
+    return new Frame(10);
   }
 
   public static Frame spare(int knockedInFirstRoll) {
