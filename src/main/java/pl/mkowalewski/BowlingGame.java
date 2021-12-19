@@ -1,5 +1,5 @@
 package pl.mkowalewski;
 
-class Main {
+class BowlingGame {
 
 }
