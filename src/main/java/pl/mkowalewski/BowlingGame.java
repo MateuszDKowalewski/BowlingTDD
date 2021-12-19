@@ -11,13 +11,17 @@ class BowlingGame {
   public int calculateScore() {
     int score = 0;
     for (int i = 0; i < 10; i++) {
-      if (framesInGame[i].isStrike()) {
-        score += getStrikeFrameScore(i);
-      } else {
-        score += getFrameScore(framesInGame[i]);
-      }
+      score += calculateFrameScore(i);
     }
     return score;
+  }
+
+  private int calculateFrameScore(int i) {
+    if (framesInGame[i].isStrike()) {
+      return getStrikeFrameScore(i);
+    } else {
+      return getFrameScore(framesInGame[i]);
+    }
   }
 
   private int getFrameScore(Frame frame) {
