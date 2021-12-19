@@ -10,6 +10,14 @@ class BowlingGameFactory {
         return new BowlingGame(frames)
     }
 
+    private static BowlingGame nineKnockedPinPerFrame() {
+        Frame[] frames = new Frame[10]
+        for (int i = 0; i < 10; i++) {
+            frames[i] = new Frame(9)
+        }
+        return new BowlingGame(frames)
+    }
+
     private static BowlingGame twelveStrikes() {
         Frame[] frames = new Frame[12]
         for (int i = 0; i < 12; i++) {

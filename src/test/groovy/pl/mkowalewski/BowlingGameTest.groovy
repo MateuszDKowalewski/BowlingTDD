@@ -15,6 +15,17 @@ class BowlingGameTest extends Specification {
         score == 10
     }
 
+    def "calculate score for 9- 9- 9- 9- 9- 9- 9- 9- 9- 9- game"() {
+        given:
+        BowlingGame bowlingGame = BowlingGameFactory.oneKnockedPinPerFrame()
+
+        when:
+        def score = bowlingGame.calculateScore()
+
+        then:
+        score == 10
+    }
+
     def "calculate score for X X X X X X X X X X X X game"() {
         given:
         BowlingGame bowlingGame = BowlingGameFactory.twelveStrikes()
