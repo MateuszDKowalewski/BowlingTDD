@@ -48,4 +48,9 @@ class BowlingGameTest extends Specification {
         score == 150
     }
 
+    def "calculate score for 2/4 X 3/ 4- 7/2 -/4 8/1 -/- 9/ 7/1 game"() {
+        given:
+        BowlingGame bowlingGame = BowlingGameFactory.ninetyOnePointsGame()
+    }
+
 }
