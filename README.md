@@ -11,6 +11,8 @@ Technology stack:
 To run project:
  - clone it
  - run `mvn clean test` from project directory
-or 
+ 
+or
+ 
  - clone it
  - run manualy test from directory `BowlingTDD/src/test/groovy` 
