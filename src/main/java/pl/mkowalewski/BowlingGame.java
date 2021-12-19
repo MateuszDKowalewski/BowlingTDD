@@ -19,6 +19,8 @@ class BowlingGame {
   private int calculateFrameScore(int i) {
     if (framesInGame[i].isStrike()) {
       return getStrikeFrameScore(i);
+    } else if (framesInGame[i].isSpare()) {
+      return getSpareFrameScore(i);
     } else {
       return getFrameScore(framesInGame[i]);
     }
@@ -36,5 +38,9 @@ class BowlingGame {
       strikeFrameScore += framesInGame[i + 2].getKnockedInFirstRoll();
     }
     return strikeFrameScore;
+  }
+
+  private int getSpareFrameScore(int i) {
+    return getFrameScore(framesInGame[i]) + framesInGame[i + 1].getKnockedInFirstRoll();
   }
 }

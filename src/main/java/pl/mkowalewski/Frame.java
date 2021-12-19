@@ -18,8 +18,11 @@ class Frame {
     return knockedInFirstRoll == 10;
   }
 
+  public boolean isSpare() {
+    return knockedInFirstRoll + knockedInSecondRoll == 10;
+  }
+
   public int getKnockedInFirstRoll() {
     return knockedInFirstRoll;
   }
-
 }
