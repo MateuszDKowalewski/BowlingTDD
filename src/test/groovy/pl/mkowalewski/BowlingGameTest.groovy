@@ -15,6 +15,17 @@ class BowlingGameTest extends Specification {
         score == 10
     }
 
+    def "calculate score for X X X X X X X X X X X X"() {
+        given:
+        BowlingGame bowlingGame = new BowlingGame(twelveStrikeRolls())
+
+        when:
+        def score = bowlingGame.calculateScore()
+
+        then:
+        score == 300
+    }
+
     private Frame[] tenFramesWithOneRolledPinEach() {
         Frame[] frames = new Frame[10]
         for (int i = 0; i < 10; i++) {
@@ -23,4 +34,11 @@ class BowlingGameTest extends Specification {
         return frames
     }
 
+    Frame[] twelveStrikeRolls() {
+        Frame[] frames = new Frame[10]
+        for (int i = 0; i < 10; i++) {
+            frames[i] = new Frame(10, 0);
+        }
+        return frames
+    }
 }
