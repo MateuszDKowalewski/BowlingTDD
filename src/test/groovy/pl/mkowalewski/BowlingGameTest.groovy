@@ -17,13 +17,13 @@ class BowlingGameTest extends Specification {
 
     def "calculate score for 9- 9- 9- 9- 9- 9- 9- 9- 9- 9- game"() {
         given:
-        BowlingGame bowlingGame = BowlingGameFactory.oneKnockedPinPerFrame()
+        BowlingGame bowlingGame = BowlingGameFactory.nineKnockedPinPerFrame()
 
         when:
         def score = bowlingGame.calculateScore()
 
         then:
-        score == 10
+        score == 90
     }
 
     def "calculate score for X X X X X X X X X X X X game"() {
