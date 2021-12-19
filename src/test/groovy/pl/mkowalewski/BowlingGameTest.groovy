@@ -26,4 +26,15 @@ class BowlingGameTest extends Specification {
         score == 300
     }
 
+    def "calculate score for 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"() {
+        given:
+        BowlingGame bowlingGame = BowlingGameFactory.pairsOfFiveAndSpareWithFinalFive()
+
+        when:
+        def score = bowlingGame.calculateScore()
+
+        then:
+        score == 150
+    }
+
 }
