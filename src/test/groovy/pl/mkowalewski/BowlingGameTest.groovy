@@ -12,7 +12,7 @@ class BowlingGameTest extends Specification {
         def score = bowlingGame.calculateScore()
 
         then:
-        score = 10
+        score == 10
     }
 
     private Frame[] tenFramesWithOneRolledPin() {
