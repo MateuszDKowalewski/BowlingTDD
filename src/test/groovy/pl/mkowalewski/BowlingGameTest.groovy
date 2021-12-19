@@ -35,8 +35,8 @@ class BowlingGameTest extends Specification {
     }
 
     Frame[] twelveStrikeRolls() {
-        Frame[] frames = new Frame[10]
-        for (int i = 0; i < 10; i++) {
+        Frame[] frames = new Frame[12]
+        for (int i = 0; i < 12; i++) {
             frames[i] = new Frame(10, 0);
         }
         return frames

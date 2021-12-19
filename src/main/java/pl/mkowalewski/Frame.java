@@ -13,4 +13,13 @@ class Frame {
   public int getKnockedPinsCount() {
     return knockedInFirstRoll + knockedInSecondRoll;
   }
+
+  public boolean isStrike() {
+    return knockedInFirstRoll == 10;
+  }
+
+  public int getKnockedInFirstRoll() {
+    return knockedInFirstRoll;
+  }
+
 }
